@@ -19,7 +19,7 @@
     <jackson.version>2.18.0</jackson.version>
     <gson.version>2.11.0</gson.version>
     <extentreports.version>5.1.2</extentreports.version>
-    <javafaker.version>1.0.2</javafaker.version>
+    <datafaker.version>2.4.0</datafaker.version>
     <lombok.version>1.18.34</lombok.version>
     <commons.langs.version>3.17.0</commons.langs.version>
     <surefire.version>3.5.1</surefire.version>
@@ -52,10 +52,11 @@
       <version>${extentreports.version}</version>
     </dependency>
     <dependency>
-      <groupId>com.github.javafaker</groupId>
-      <artifactId>javafaker</artifactId>
-      <version>${javafaker.version}</version>
+      <groupId>net.datafaker</groupId>
+      <artifactId>datafaker</artifactId>
+      <version>${datafaker.version}</version>
     </dependency>
+
     <dependency>
       <groupId>org.projectlombok</groupId>
       <artifactId>lombok</artifactId>

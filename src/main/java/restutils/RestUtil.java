@@ -51,4 +51,12 @@ public class RestUtil {
         ExtentReportsManager.logInfoDetails("Response body : ");
         ExtentReportsManager.logJsonDetails(response.getBody().prettyPrint());
     }
+
+    public static Response performPost(String endpoint, Object pojoPayload, Map<String, String> headers) {
+        RequestSpecification requestSpecification = getRequestSpecification(endpoint, pojoPayload, headers);
+        Response response = requestSpecification.post();
+        logRequestDetailsInReport(requestSpecification);
+        logResponseDetailsInReport(response);
+        return response;
+    }
 }
