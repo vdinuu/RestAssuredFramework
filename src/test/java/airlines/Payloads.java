@@ -45,7 +45,7 @@ public class Payloads {
                 .country(RandomDataGenerator.generateRandomData(RandomDataTypes.COUNTRY))
                 .logo(RandomDataGenerator.generateRandomData(RandomDataTypes.BRAND))
                 .slogan(RandomDataGenerator.generateRandomData(RandomDataTypes.BRAND))
-                .head_quaters(Arrays.stream(City.values()).findAny().get())
+                .head_quaters(Arrays.stream(City.values()).findAny().get().name())
                 .website(RandomDataGenerator.generateRandomWebsite())
                 .established(String.valueOf(RandomDataGenerator.generateYear(1990, 2024)))
                 .build();

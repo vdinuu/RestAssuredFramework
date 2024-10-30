@@ -19,11 +19,13 @@ public class CreateAirline {
     //To exclude comparision of one field- ID
     @EqualsAndHashCode.Exclude
     private int id = RandomDataGenerator.generateRandomNumber(6);
+    @EqualsAndHashCode.Include
     private String name = RandomDataGenerator.generateRandomData(RandomDataTypes.FIRST_NAME);
     private String country = RandomDataGenerator.generateRandomData(RandomDataTypes.COUNTRY);
     private String logo = RandomDataGenerator.generateRandomData(RandomDataTypes.BRAND);
     private String slogan = RandomDataGenerator.generateRandomData(RandomDataTypes.BRAND);
-    private City head_quaters = Arrays.stream(City.values()).findAny().get();
+    private String head_quaters = Arrays.stream(City.values()).findAny().get().name();
+//    private String head_quaters = RandomDataGenerator.generateRandomData(RandomDataTypes.CITY);
     private String website = RandomDataGenerator.generateRandomWebsite();
     private String established= String.valueOf(RandomDataGenerator.generateYear(1990, 2024));
 
